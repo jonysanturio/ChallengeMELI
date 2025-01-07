@@ -1,0 +1,15 @@
+client_config_backend: settings # Defino la fuente de configuracion a cliente OAuth 2.0
+
+#En este caso es sobre las credenciales del cliente OAuth 2.0 junto al id y el secret de la API de Google Drive
+client_config:
+client_id: 899437338588-o4vctckk91sadhca989eaoha0htmmqc5.apps.googleusercontent.com
+client_secret: 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
+
+save_credentials: True # Para guardar las credenciales, para que no sea necesaria la autenticacion para cada ejecucion
+save_credentials_backend: file # Esto es para guardar y que se vayan almacenando las credenciales
+save_credentials_file: credentials_module.json # Aca es donde se van a guardar las credenciales, en este caso en otro archivo de tipo JSON
+
+get_refresh_token: True # Esto es para el token para obtener uno nuevo y accesa automaticamente cuando el actual expiré
+
+oauth_scope: # En este caso es sobre los permisos de la aplicacion, otorgar acceso completo a todos los archivos y carpetas de Google Drive 
+  - https://www.googleapis.com/auth/drive
